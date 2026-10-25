@@ -1,0 +1,100 @@
+#include "ctx.h"
+
+extern u32 data_02149084;
+extern u8 *data_0215be48;
+
+extern void func_0206c7bc(u16 a, u8 *b, u32 c);
+extern void func_02111c34(u8 *p);
+extern u32 func_0209406c(void);
+extern void func_02112268(void);
+extern void func_02112218(void);
+extern void func_02106364(void);
+extern void func_0211200c(void);
+extern void func_0210a918(u8 *p);
+
+typedef struct { u32 w[5]; } T5;
+
+void func_020fddec(u8 *param_1)
+{
+    vu16 l0;
+    vu16 l4;
+    vu16 l8;
+    u32 z;
+    u8 *pp;
+    u8 *base;
+    u32 *puVar4;
+    u32 uVar2;
+
+    *(u32 *)(param_1 + 0xac) = 0;
+    *(u32 *)(param_1 + 0xb0) = 0;
+    *(u32 *)(param_1 + 0xb4) = 0xffffffff;
+    *(u32 *)(param_1 + 0xb8) = 0;
+    *(u32 *)(param_1 + 0xc0) = data_02149084;
+    *(u32 *)(param_1 + 0x1000 + 0xde4) = 0;
+    *(u32 *)(param_1 + 0x1000 + 0xde8) = 0;
+    l0 = 0;
+    func_0206c7bc(l0, param_1 + 0xc4, 0x1d20);
+    l4 = 0;
+    func_0206c7bc(l4, param_1 + 0x1dec, 0xa50);
+    *(u32 *)(param_1 + 0x484c) = 0;
+    *(u32 *)(param_1 + 0x4850) = 0;
+    *(u32 *)(param_1 + 0x4854) = 0;
+    *(u32 *)(param_1 + 0x485c) = 0;
+    *(u32 *)(param_1 + 0x4860) = 0;
+    *(u32 *)(param_1 + 0x487c) = 0;
+    *(u32 *)(param_1 + 0x4884) = 0;
+    *(u32 *)(param_1 + 0x4880) = 0;
+    *(u32 *)(param_1 + 0x4870) = 0xffffffff;
+    *(u32 *)(param_1 + 0x4874) = 0;
+    *(u32 *)(param_1 + 0x4878) = 0xffffffff;
+    *(u32 *)(param_1 + 0xc838) = 0;
+    *(u32 *)(param_1 + 0xc83c) = 0;
+    *(u16 *)(param_1 + 0x11160) = 0;
+    *(u16 *)(param_1 + 0x11162) = 2;
+    *(u32 *)(param_1 + 0x4858) = 0;
+    *(u32 *)(data_0215be48 + 0x4840) = 0x6400;
+    *(u32 *)(data_0215be48 + 0x4848) = 0x1e400;
+    *(u32 *)(data_0215be48 + 0x483c) = 0;
+    *(u32 *)(data_0215be48 + 0x4844) = 0;
+    func_02111c34(param_1 + 0xc840);
+    z = 0;
+    *(u32 *)(param_1 + 0x48b0) = z;
+    base = data_0215be48;
+    pp = base + 0x53f4;
+    puVar4 = (u32 *)pp;
+    puVar4[10] = z;
+    *(u32 *)(base + 0x53f4) = z;
+    puVar4[1] = z;
+    puVar4[2] = z;
+    puVar4[3] = z;
+    puVar4[4] = z;
+    *(T5 *)(puVar4 + 5) = *(T5 *)puVar4;
+    *(u16 *)(param_1 + 0x1114c) = 999;
+    *(u32 *)(param_1 + 0x11150) = z;
+    *(u16 *)(param_1 + 0x11154) = 10;
+    *(u32 *)(param_1 + 0x4888) = 220;
+    *(u32 *)(param_1 + 0x488c) = 140;
+    *(u32 *)(param_1 + 0x4890) = z;
+    *(u32 *)(param_1 + 0x4894) = z;
+    *(u32 *)(param_1 + 0x4898) = 1;
+    uVar2 = func_0209406c();
+    *(u32 *)(param_1 + 0x11158) = uVar2;
+    func_02112268();
+    func_02112218();
+    *(s16 *)(param_1 + 0x48b4) = -1;
+    *(s16 *)(param_1 + 0x48b6) = -1;
+    *(u32 *)(param_1 + 0x48b8) = z;
+    *(u32 *)(param_1 + 0x48bc) = z;
+    *(u32 *)(param_1 + 0x48c0) = z;
+    *(u32 *)(param_1 + 0x48c4) = z;
+    *(u32 *)(param_1 + 0x4864) = z;
+    *(u32 *)(param_1 + 0x4868) = z;
+    *(u32 *)(param_1 + 0x486c) = z;
+    l8 = (u16)z;
+    func_0206c7bc(l8, param_1 + 0x48c8, 1024);
+    func_02106364();
+    *(u32 *)(data_0215be48 + 0x4870) |= 0xffffffff;
+    func_0211200c();
+    func_0210a918(param_1 + 0x5254);
+    *(u32 *)(data_0215be48 + 0x1115c) = 1;
+}

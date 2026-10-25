@@ -1,0 +1,9 @@
+#include "ctx.h"
+
+extern u8 *data_02159034;
+
+s32 func_020938f0(void)
+{
+    u8 *q = data_02159034 + 0x1000;
+    return *(s32 *)(q + 0x41c) + 0x26;
+}

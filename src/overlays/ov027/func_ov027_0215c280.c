@@ -1,0 +1,98 @@
+#include "ctx.h"
+
+extern u8 data_ov027_0215c5e0[];
+extern u8 data_ov027_0215c5a8[];
+extern u32 func_02002e60(void);
+extern u8 *func_02002e58(u32 a);
+extern void func_020068c4(u8 *p, u16 *q);
+extern void func_020068c0(u8 *p, u32 n);
+extern void func_02006700(u32 idx, u32 fn);
+extern void func_0208c604(u8 *p, u32 a);
+extern void func_02005e18(u16 *q);
+extern u16 *func_0200563c(u8 *p, u16 *q);
+extern void func_0200560c(u8 *p, u32 a, u32 b, u32 c, u32 d, u32 e, u32 f, u32 g);
+extern void func_020055b4(u8 *p, u32 a, u32 b, u32 c, u32 d, u32 e, u32 f);
+extern u8 *func_020038b8(u8 *p, u32 n);
+extern u8 *func_020073f4(u8 *p, u32 a, u32 b, u32 c);
+extern void func_0206c7bc(u32 a, u32 b, u32 c);
+extern void func_020042e8(u16 *q);
+extern u8 *func_ov027_0215c4a4(u8 *p);
+extern void func_0206b8a8(u32 a, u32 b, u32 c);
+extern void func_0208010c(u32 a, u32 b);
+extern u64 func_0206b3e4(u32 a, u32 b, u32 c);
+extern void func_02005900(void);
+extern void func_020068a0(void);
+extern void func_020067d8(void);
+extern void func_02006734(void);
+extern void func_ov027_0215c574(void);
+
+void func_ov027_0215c280(void)
+{
+  u8 *piVar2;
+  u16 *puVar3;
+  u8 *puVar4;
+  u8 *puVar5;
+  u8 *puVar6;
+  s32 iVar7;
+  s32 iVar10;
+  u32 uVar9;
+  u32 uVar8;
+  s32 iVar1;
+  volatile u16 a16;
+  u16 a18[2];
+  u16 a22[18];
+  u64 uVar11;
+  u8 *pp;
+  uVar9 = func_02002e60();
+  piVar2 = func_02002e58(uVar9);
+  a18[0] = 255;
+  a18[1] = 0;
+  func_020068c4(piVar2, a18);
+  func_020068c0(piVar2, 4);
+  func_02006700(0, (u32)func_020068a0);
+  func_02006700(1, (u32)func_020067d8);
+  func_02006700(2, (u32)func_02006734);
+  func_02006700(3, (u32)func_ov027_0215c574);
+  func_0208c604(piVar2, 3);
+  func_02005e18(a22);
+  a22[1] = 5;
+  a22[3] = 1;
+  a22[5] = 1;
+  a22[4] = 0;
+  a22[7] = 8;
+  a22[11] = 7;
+  a22[12] = 16;
+  a22[8] = 64;
+  puVar3 = func_0200563c(piVar2, a22);
+  func_0200560c((u8 *)(puVar3 + 22), 2, 0, 0, 1, 5, 1, 0);
+  func_020055b4((u8 *)(puVar3 + 22), 1, 0, 0, 0, 24, 1);
+  puVar4 = func_020038b8(piVar2, 0x608);
+  *(u32 *)puVar4 = 0;
+  puVar5 = func_020073f4(piVar2, 0x20, 0x18, 0);
+  *(u8 **)(puVar4 + 4) = puVar5;
+  pp = *(u8 **)(puVar4 + 4);
+  a16 = 0;
+  func_0206c7bc(a16, *(u32 *)pp, *(u32 *)(pp + 16));
+  iVar1 = 0;
+  uVar9 = 0;
+  uVar8 = 0;
+  do {
+    iVar10 = (s32)uVar8;
+    do {
+      iVar7 = (s32)((u32)iVar10 + uVar9);
+      *(s16 *)(puVar4 + iVar7 * 2 + 8) = (s16)iVar7;
+      iVar10 = iVar10 + 1;
+    } while (iVar10 < 32);
+    iVar1 = iVar1 + 1;
+    uVar9 = uVar9 + 32;
+  } while (iVar1 < 24);
+  *(u8 **)data_ov027_0215c5e0 = puVar4;
+  func_020042e8(puVar3);
+  puVar6 = func_ov027_0215c4a4(piVar2);
+  puVar4 = *(u8 **)data_ov027_0215c5e0;
+  *(u8 **)puVar4 = puVar6;
+  func_0206b8a8((u32)data_ov027_0215c5a8, 0, 32);
+  func_0208010c((u32)(*(u8 **)data_ov027_0215c5e0 + 8), 0x600);
+  func_0206b3e4((u32)(*(u8 **)data_ov027_0215c5e0 + 8), 0, 0x600);
+  func_02005900();
+}

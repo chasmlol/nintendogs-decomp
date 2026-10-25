@@ -1,0 +1,104 @@
+#include "ctx.h"
+
+extern u8 *data_ov007_02160e58;
+
+extern void func_020068a0(void);
+extern void func_020067d8(void);
+
+extern s32 func_02002e60(void);
+extern s32 *func_02002e58(s32);
+extern void func_020068c4(s32 *, u16 *);
+extern void func_020068c0(s32 *, s32);
+extern void func_02006700(s32, s32);
+extern void func_ov007_02160794(s32 *);
+extern s32 func_ov007_0215f630(s32 *);
+extern u32 *func_020038b8(s32 *, s32);
+extern void func_020042e8(s32);
+extern void func_0208e398(s32 *);
+extern void func_0208f380(void);
+extern void func_0208e1e8(u16 *);
+extern s32 func_0208e150(s32 *, u16 *);
+extern s32 func_0208f698(s32);
+extern void func_02067e34(s32 *, s32 *, s32 *);
+extern void func_02006a30(u32 *, s32 *);
+extern void func_0209944c(void);
+extern u16 *func_02006cc4(s32 *, s32);
+extern void func_0206c7f0(s32, u32 *, s32);
+extern void func_020075c8(s32 *);
+extern void func_ov007_0215fa6c(s32 *);
+extern void func_02006028(void);
+extern u64 func_02005f84(void);
+extern void func_02005900(u64);
+
+void func_ov007_0215f45c(void)
+{
+    s32 *puVar6;
+    s32 iVar2;
+    s32 *piVar3;
+    u32 *puVar5;
+    u16 *puVar7;
+    s32 extraout_r1;
+    u32 uVar8;
+    s32 uVar9;
+    u64 uVar10;
+    u16 local_28[2];
+    volatile s32 local_24;
+    u16 auStack_20[8];
+    u32 *pa;
+    u32 *pb;
+    s32 *pc;
+    vu16 *pio;
+    u16 *puVar4;
+
+    iVar2 = func_02002e60();
+    piVar3 = func_02002e58(iVar2);
+    local_28[0] = 0xff;
+    local_28[1] = 0;
+    func_020068c4(piVar3, local_28);
+    func_020068c0(piVar3, 4);
+    func_02006700(0, (s32)func_020068a0);
+    func_02006700(1, (s32)func_020067d8);
+    func_ov007_02160794(piVar3);
+    puVar4 = (u16 *)func_ov007_0215f630(piVar3);
+    puVar5 = func_020038b8(piVar3, 12);
+    *puVar5 = 0;
+    data_ov007_02160e58 = (u8 *)puVar5;
+    func_020042e8((s32)puVar4);
+    *(vu16 *)0x04000304 = *(vu16 *)0x04000304 | 0x8000;
+    func_0208e398(piVar3);
+    func_0208f380();
+    func_0208e1e8(auStack_20);
+    puVar6 = (s32 *)func_0208e150(piVar3, auStack_20);
+    iVar2 = func_0208f698((s32)puVar6);
+    pa = (u32 *)(iVar2 + 0x3c);
+    *(s32 *)(iVar2 + 0x3c) = 0;
+    pa[1] = 0x400;
+    pa[2] = 0;
+    *(s32 *)(iVar2 + 0x30) = 0;
+    pb = (u32 *)(iVar2 + 0x30);
+    pb[1] = 0x3000;
+    pb[2] = 0x7000;
+    pc = (s32 *)(iVar2 + 0x48);
+    func_02067e34((s32 *)(iVar2 + 0x3c), (s32 *)(iVar2 + 0x30), pc);
+    func_02006a30((u32 *)(iVar2 + 0x48), (s32 *)(iVar2 + 0x48));
+    *(s32 *)data_ov007_02160e58 = (s32)puVar6;
+    func_0209944c();
+    puVar7 = func_02006cc4(piVar3, 0x80);
+    *(u16 **)(data_ov007_02160e58 + 4) = puVar7;
+    puVar7 = *(u16 **)(data_ov007_02160e58 + 4);
+    puVar7[1] = 0;
+    local_24 = 0xc0;
+    iVar2 = (u32)*puVar7 << 3;
+    func_0206c7f0(local_24, *(u32 **)(puVar7 + 2), iVar2);
+    func_020075c8(piVar3);
+    func_ov007_0215fa6c(piVar3);
+    uVar8 = 0x4000000;
+    *(vu32 *)0x04000000 = *(vu32 *)0x04000000 | 0x200;
+    pio = (vu16 *)0x0400000a;
+    *pio = (*pio & 0x43) | 0x400;
+    *pio = *pio & ~3;
+    *pio = *pio & ~64;
+    func_02006028();
+    uVar10 = func_02005f84();
+    func_02005900(uVar10);
+}

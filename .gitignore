@@ -1,0 +1,7 @@
+# ROMs and build output: never commit
+*.nds
+*.srl
+*.o
+*.elf
+*.bin
+build/

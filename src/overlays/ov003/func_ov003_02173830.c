@@ -1,0 +1,31 @@
+#include "ctx.h"
+
+extern s32 func_ov003_02174904(u8 *p, u32 a, s32 b, u32 c);
+extern s32 func_02039cc4(u8 *p);
+extern u8 *func_020bc3c4(void);
+extern void func_020bbe14(u32 a, s32 b);
+extern void func_0203e908(u8 *p, u32 n);
+
+void func_ov003_02173830(u8 *param_1)
+{
+  s32 iVar1;
+  u8 *q;
+  iVar1 = func_ov003_02174904(param_1, 22, -1, 0);
+  if (*(s16 *)(param_1 + 234) >= 16 && *(s16 *)(param_1 + 234) <= 30) {
+    return;
+  }
+  if (iVar1 == 0) {
+    return;
+  }
+  iVar1 = func_02039cc4(param_1);
+  if (iVar1 != 0) {
+    q = func_020bc3c4() + 136;
+    *(u32 *)(q + 0x6c) = 0;
+    func_020bbe14(2, *(s8 *)(param_1 + 136));
+  }
+  if (*(u16 *)(param_1 + 244) >= 79 && *(u16 *)(param_1 + 244) < 99) {
+    func_0203e908(param_1, 0x438);
+    return;
+  }
+  func_0203e908(param_1, 6);
+}
